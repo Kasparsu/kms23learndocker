@@ -7,3 +7,19 @@ services:
       - 6969:80
     volumes:
       - ./html:/usr/local/apache2/htdocs
+  db:
+    image: mariadb
+    restart: always
+    environment:
+      MARIADB_ROOT_PASSWORD: example
+    volumes:
+      - kms23-learn-docker-dbdata:/var/lib/mysql
+    ports:
+      - 3306:3306
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+volumes:
+  kms23-learn-docker-dbdata:
