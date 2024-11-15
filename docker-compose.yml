@@ -12,6 +12,7 @@ services:
     restart: always
     environment:
       MARIADB_ROOT_PASSWORD: example
+      MARIADB_DATABASE: learndocker
     volumes:
       - kms23-learn-docker-dbdata:/var/lib/mysql
     ports:
