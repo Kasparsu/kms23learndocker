@@ -3,3 +3,5 @@ services:
     image: httpd
     ports:
       - 6969:80
+    volumes:
+      - ./html:/usr/local/apache2/htdocs
